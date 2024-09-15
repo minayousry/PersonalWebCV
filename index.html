@@ -7,13 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
-    
 <body>
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="spinner"></div>
-    </div>
-
     <!-- Navigation Bar -->
     <header>
         <nav id="navbar">
@@ -26,20 +20,16 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="theme-toggle">
-                <span>🌞</span> <input type="checkbox" id="theme-switcher"> <span>🌜</span>
-            </div>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="hero">
+    <section class="hero">
         <div class="hero-content">
             <h1>Mina Yousry Samy Armanios</h1>
             <p>ADAS & AD Software Architect | Embedded Systems Specialist</p>
             <a href="#contact" class="btn-primary">Contact Me</a>
         </div>
-        <div class="parallax-bg"></div>
     </section>
 
     <!-- About Section -->
@@ -123,6 +113,16 @@
         <p>&copy; 2024 Mina Armanios. All Rights Reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Lightweight JavaScript for scroll animation -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
