@@ -8,73 +8,120 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Navigation Bar -->
     <header>
-        <div class="hero">
-            <h1>Mina Yousry Samy Armanios</h1>
-            <p>ADAS & AD Software Architect | Embedded Systems Specialist</p>
-            <nav>
-                <a href="https://www.linkedin.com/in/mina-samy1" target="_blank">LinkedIn</a>
-                <a href="https://github.com/minayousry" target="_blank">GitHub</a>
-            </nav>
-        </div>
+        <nav id="navbar">
+            <div class="logo">Mina Armanios</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <span>🌞</span> <input type="checkbox" id="theme-switcher"> <span>🌜</span>
+            </div>
+        </nav>
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am a highly skilled Embedded Software Architect with extensive experience in automotive software development, particularly in ADAS, AUTOSAR, and embedded Linux systems.</p>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1>Mina Yousry Samy Armanios</h1>
+            <p>ADAS & AD Software Architect | Embedded Systems Specialist</p>
+            <a href="#contact" class="btn-primary">Contact Me</a>
+        </div>
+        <div class="parallax-bg"></div>
     </section>
 
-    <section id="experience">
-        <h2>Experience</h2>
-        <div class="job">
-            <h3>ADAS & AD Software Architect</h3>
-            <p><strong>Company:</strong> Aston Martin Lagonda, UK (Feb 2024 – Present)</p>
-            <ul>
-                <li>Ensure scalable architecture for ADAS systems.</li>
-                <li>Support in resolving Basic Software issues using tools like Polarian, Capella, and Davinci Configurator.</li>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I am a highly skilled Embedded Software Architect with extensive experience in automotive software development, particularly in ADAS, AUTOSAR, and embedded Linux systems.</p>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2>Experience</h2>
+            <div class="job">
+                <h3>ADAS & AD Software Architect</h3>
+                <p><strong>Company:</strong> Aston Martin Lagonda, UK (Feb 2024 – Present)</p>
+                <ul>
+                    <li>Ensure scalable architecture for ADAS systems.</li>
+                    <li>Support in resolving Basic Software issues using tools like Polarian, Capella, and Davinci Configurator.</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h3>Embedded Software Architect</h3>
+                <p><strong>Company:</strong> Luxoft, Egypt (Jul 2022 – Feb 2024)</p>
+                <ul>
+                    <li>Designed Bookshelf components for AUTOSAR-based functions.</li>
+                    <li>Guided development teams and integrated C++ components into the Telematics platform.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Key Projects</h2>
+            <div class="project">
+                <h3>Telematics Platform</h3>
+                <p><strong>Client:</strong> Continental | <strong>Role:</strong> Embedded Software Architect</p>
+                <p>Developed and integrated C++ components for the NXP i.MX 8 SOC-based platform.</p>
+            </div>
+            <div class="project">
+                <h3>Auto Parking – Daimler and Ford</h3>
+                <p>Designed platform for Sensor Fusion applications in vehicles.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2>Education</h2>
+            <p><strong>Master of Engineering in Embedded Systems</strong> - Cairo University (2021 – 2024)</p>
+            <p><strong>BSc in Communications and Electronics</strong> - Benha University (2006 – 2011)</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>Skills</h2>
+            <ul class="skills-grid">
+                <li>Languages: C, C++, Python</li>
+                <li>Tools: Davinci Configurator, CANoe, Jenkins</li>
+                <li>Platforms: AUTOSAR, Embedded Linux</li>
             </ul>
         </div>
-        <div class="job">
-            <h3>Embedded Software Architect</h3>
-            <p><strong>Company:</strong> Luxoft, Egypt (Jul 2022 – Feb 2024)</p>
-            <ul>
-                <li>Designed Bookshelf components for AUTOSAR-based functions.</li>
-                <li>Guided development teams and integrated C++ components into the Telematics platform.</li>
-            </ul>
-        </div>
     </section>
 
-    <section id="projects">
-        <h2>Key Projects</h2>
-        <div class="project">
-            <h3>Telematics Platform</h3>
-            <p><strong>Client:</strong> Continental | <strong>Role:</strong> Embedded Software Architect</p>
-            <p>Developed and integrated C++ components for the NXP i.MX 8 SOC-based platform.</p>
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:mina.yousry.iti@gmail.com">mina.yousry.iti@gmail.com</a></p>
+            <p>Phone: +447362212065</p>
         </div>
-        <div class="project">
-            <h3>Auto Parking – Daimler and Ford</h3>
-            <p>Designed platform for Sensor Fusion applications in vehicles.</p>
-        </div>
-    </section>
-
-    <section id="education">
-        <h2>Education</h2>
-        <p><strong>Master of Engineering in Embedded Systems</strong> - Cairo University (2021 – 2024)</p>
-        <p><strong>BSc in Communications and Electronics</strong> - Benha University (2006 – 2011)</p>
-    </section>
-
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Languages: C, C++, Python</li>
-            <li>Tools: Davinci Configurator, CANoe, Jenkins</li>
-            <li>Platforms: AUTOSAR, Embedded Linux</li>
-        </ul>
     </section>
 
     <footer>
-        <p>Contact me at <a href="mailto:mina.yousry.iti@gmail.com">mina.yousry.iti@gmail.com</a></p>
-        <p>Phone: +447362212065</p>
+        <p>&copy; 2024 Mina Armanios. All Rights Reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
