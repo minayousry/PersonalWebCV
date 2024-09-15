@@ -288,4 +288,138 @@
         </div>
     </header>
 
-    <
+    <main class="container">
+        <section id="summary">
+            <h2>Professional Summary</h2>
+            <p>Highly skilled Embedded Software Architect with extensive experience in ADAS, autonomous driving, and automotive software development. Proven track record in designing scalable and modular architectures for complex embedded systems. Expertise in AUTOSAR, C/C++, and various embedded technologies, with a strong focus on innovation and problem-solving in the automotive industry.</p>
+        </section>
+
+        <section id="experience">
+            <h2>Work Experience</h2>
+            <div class="job">
+                <h3>ADAS & AD Software Architect</h3>
+                <p class="job-title">Aston Martin Lagonda – United Kingdom</p>
+                <p class="job-date">February 2024 – Present</p>
+                <ul>
+                    <li>Design and implement scalable, modular ADAS architecture for luxury vehicles</li>
+                    <li>Optimize interactions between sensors, control units, and software for advanced driver assistance features</li>
+                    <li>Collaborate with external suppliers to resolve Basic Software (BSW) issues and ensure seamless integration</li>
+                    <li>Utilize Polarian, Capella, and Davinci Configurator for efficient system design and configuration</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h3>Embedded Software Architect</h3>
+                <p class="job-title">Luxoft - Egypt</p>
+                <p class="job-date">July 2022 – February 2024</p>
+                <ul>
+                    <li>Designed Bookshelf components based on Classic Autosar for common functions across multiple projects</li>
+                    <li>Interfaced with customers and system engineering teams to ensure proper documentation of software requirements</li>
+                    <li>Mentored and guided the Software Development team, fostering growth and knowledge sharing</li>
+                    <li>Developed and integrated components for the Telematics platform using C++ on NXP i.MX 8 SOC</li>
+                    <li>Utilized Enterprise Architect for system modeling and design</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h3>Embedded Software Architect and Tech Lead</h3>
+                <p class="job-title">Valeo - Egypt</p>
+                <p class="job-date">February 2015 – July 2022</p>
+                <ul>
+                    <li>Led technical activities for new project scopes, ensuring alignment with client requirements</li>
+                    <li>Designed platform for Sensor fusion applications deployable across various targets</li>
+                    <li>Configured MCAL and AUTOSAR 3.x and 4.x BSW Components using Tresos and Davinci Configurator</li>
+                    <li>Integrated and generated AUTOSAR RTE applications using Davinci Developer</li>
+                    <li>Developed desktop applications in Qt (C++) using OOP techniques and STL</li>
+                    <li>Contributed to significant projects including Auto parking for Daimler and Ford, and ADAS for Honda and Renault</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills">
+                <span class="skill" data-level="95">AUTOSAR (Classic & Adaptive)</span>
+                <span class="skill" data-level="90">C/C++</span>
+                <span class="skill" data-level="85">Embedded Linux</span>
+                <span class="skill" data-level="80">Python</span>
+                <span class="skill" data-level="85">UML</span>
+                <span class="skill" data-level="90">Git</span>
+                <span class="skill" data-level="95">ADAS</span>
+                <span class="skill" data-level="85">Telematics</span>
+                <span class="skill" data-level="80">CAN</span>
+                <span class="skill" data-level="75">Flexray</span>
+                <span class="skill" data-level="90">Davinci Tools</span>
+                <span class="skill" data-level="85">Tresos</span>
+                <span class="skill" data-level="80">Qt</span>
+                <span class="skill" data-level="75">OSEK</span>
+                <span class="skill" data-level="85">Lauterbach Debugging</span>
+                <span class="skill" data-level="90">Enterprise Architect</span>
+            </div>
+            <canvas id="skills-chart"></canvas>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Master of Engineering in Embedded Systems</h3>
+                <p>Cairo University</p>
+                <p class="job-date">October 2021 – June 2024 (Expected)</p>
+            </div>
+            <div class="education-item">
+                <h3>9 Month Diploma, Embedded Systems Department</h3>
+                <p>Information Technology Institute (ITI)</p>
+                <p class="job-date">October 2011 – June 2012</p>
+            </div>
+            <div class="education-item">
+                <h3>BSc in Communications and Electronics</h3>
+                <p>Faculty of Engineering Shoubra, Benha University</p>
+                <p class="job-date">November 2006 – July 2011</p>
+                <p>Accumulative Grade: Very Good</p>
+                <p>Graduation Project</p>
+			</div>
+		</section>
+		<section id="certifications">
+            <h2>Certifications & Additional Training</h2>
+            <ul>
+                <li>Web Development Professional Nanodegree - Udacity (January 2021 – February 2021)</li>
+                <li>Self-Driving Car Engineer Nanodegree - Udacity (March 2019 – September 2019)</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mina Armanios. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const sections = document.querySelectorAll('section');
+            
+            const fadeInOnScroll = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+            
+            const options = {
+                root: null,
+                threshold: 0.1,
+                rootMargin: "0px"
+            };
+            
+            const observer = new IntersectionObserver(fadeInOnScroll, options);
+            
+            sections.forEach(section => {
+                section.style.opacity = 0;
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.5s ease-out, transform 0.5s ease-out';
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
+
+		
